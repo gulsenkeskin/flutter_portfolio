@@ -4,13 +4,13 @@ import 'package:flutter_portfolio/constants/color_constants.dart';
 import 'package:flutter_portfolio/core/components/text/text_fira.dart';
 import 'package:flutter_portfolio/core/components/text_span/text_span_fira.dart';
 import 'package:flutter_portfolio/extensions/context_extensions.dart';
+import 'package:flutter_portfolio/view/home/widgets/chess_game.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    ChessBoardController controller = ChessBoardController();
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -83,46 +83,7 @@ class HomeView extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                left: context.fem980,
-                top: context.fem179,
-                child: Align(
-                  child: SizedBox(
-                    width: context.fem780,
-                    height: context.fem742,
-                    //todo oyun alanı ---------
-                    child: Column(
-                      children: [
-                        Expanded(
-                          child: Center(
-                            child: ChessBoard(
-                              controller: controller,
-                              boardColor: BoardColor.green,
-                              boardOrientation: PlayerColor.white,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: ValueListenableBuilder<Chess>(
-                            valueListenable: controller,
-                            builder: (context, game, _) {
-                              return Text(
-                                controller.getSan().fold(
-                                      '',
-                                      (previousValue, element) =>
-                                          previousValue +
-                                          '\n' +
-                                          (element ?? ''),
-                                    ),
-                              );
-                            },
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              ChessGame(),
               Positioned(
                 left: context.fem380,
                 top: context.fem644,
@@ -208,3 +169,4 @@ class HomeView extends StatelessWidget {
     );
   }
 }
+
