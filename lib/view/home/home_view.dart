@@ -83,7 +83,7 @@ class HomeView extends StatelessWidget {
                   ),
                 ),
               ),
-              ChessGame(),
+              const ChessGame(),
               Positioned(
                 left: context.fem380,
                 top: context.fem644,
