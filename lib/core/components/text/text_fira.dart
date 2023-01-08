@@ -8,8 +8,9 @@ class TextFiraCode extends StatelessWidget {
   final Color? color;
   final double? fontSize;
   final FontWeight? fontWeight;
+  final TextAlign? textAlign;
   const TextFiraCode(this.text,
-      {Key? key, this.color, this.fontSize, this.fontWeight})
+      {Key? key, this.color, this.fontSize, this.fontWeight, this.textAlign})
       : super(key: key);
 
   @override
@@ -23,6 +24,7 @@ class TextFiraCode extends StatelessWidget {
         height: context.textHeight,
         color: color ?? MyColors.cropperBlue,
       ),
+      textAlign: textAlign,
     );
   }
 }
