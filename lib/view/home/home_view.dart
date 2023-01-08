@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_chess_board/flutter_chess_board.dart';
 import 'package:flutter_portfolio/constants/color_constants.dart';
-import 'package:flutter_portfolio/core/components/text/text_fira.dart';
-import 'package:flutter_portfolio/core/components/text_span/text_span_fira.dart';
 import 'package:flutter_portfolio/extensions/context_extensions.dart';
-import 'package:flutter_portfolio/view/home/widgets/chess_game.dart';
+import 'package:flutter_portfolio/view/home/widgets/about.dart';
+import 'package:flutter_portfolio/view/home/widgets/footer.dart';
+import 'package:flutter_portfolio/view/home/widgets/game.dart';
+import 'package:flutter_portfolio/view/home/widgets/header.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -14,159 +14,45 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
+          width: double.infinity,
           height: context.height,
           decoration: const BoxDecoration(
             color: MyColors.blackKnight,
           ),
-          child: Stack(
-            children: [
-              Positioned(
-                  left: context.fem69,
-                  height: context.fem69,
-                  child: Align(
-                    child: SizedBox(
-                      width: context.fem1782,
-                      height: context.fem941,
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(context.fem8),
-                          border: Border.all(color: MyColors.tangara),
-                          color: MyColors.blackManga,
-                        ),
+          child: Container(
+              margin: EdgeInsets.all(context.fem69),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(context.fem8),
+                border: Border.all(color: MyColors.tangara),
+                color: MyColors.blackManga,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(context.fem17),
+                    child: const Header(),
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: context.dynamicFem(322)),
+                        child: const About(),
                       ),
-                    ),
-                  )),
-              Positioned(
-                // hialliamTFx (64:1231)
-                left: context.fem380,
-                top: context.fem391,
-                child: Align(
-                  child: SizedBox(
-                    width: context.fem130,
-                    height: context.fem24,
-                    child: TextFiraCode(
-                      'Hi all. I am',
-                      fontSize: context.ffem18,
-                      color: MyColors.whisperBlue,
-                    ),
+                      const Game()
+                    ],
                   ),
-                ),
-              ),
-              Positioned(
-                left: context.fem380,
-                top: context.fem490,
-                child: Align(
-                  child: SizedBox(
-                    width: context.fem404,
-                    height: context.fem42,
-                    child: TextFiraCode(
-                      '> Software developer',
-                      color: MyColors.savoyBlue,
-                      fontSize: context.dynamicFFem(32),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: context.fem380,
-                top: context.fem415,
-                child: Align(
-                  child: SizedBox(
-                    width: context.fem521,
-                    height: context.fem82,
-                    child: TextFiraCode(
-                      'Gülsen Keskin',
-                      fontSize: context.fem62,
-                      color: MyColors.whisperBlue,
-                      fontWeight: FontWeight.w300,
-                    ),
-                  ),
-                ),
-              ),
-              const ChessGame(),
-              Positioned(
-                left: context.fem380,
-                top: context.fem644,
-                child: Align(
-                  child: SizedBox(
-                    width: context.fem385,
-                    height: context.fem21,
-                    child: TextFiraCode(
-                      '// you can also see it on my Github page',
-                      fontSize: context.ffem16,
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: context.fem380,
-                top: context.fem613,
-                child: Align(
-                  child: SizedBox(
-                    width: context.fem308,
-                    height: context.fem21,
-                    child: const TextFiraCode(
-                      '// complete the game to continue',
-                    ),
-                  ),
-                ),
-              ),
-
-              //github linki
-              Positioned(
-                left: context.fem380,
-                top: context.fem674,
-                child: Align(
-                  child: SizedBox(
-                    width: context.fem490,
-                    height: context.fem21,
-                    child: githubUrl(context),
-                  ),
-                ),
-              ),
-            ],
-          ),
+                  Padding(
+                    padding: EdgeInsets.all(context.fem17),
+                    child: const Footer(),
+                  )
+                ],
+              )),
         ),
       ),
     );
   }
-
-  RichText githubUrl(BuildContext context) {
-    return RichText(
-      text: TextSpan(
-        children: [
-          textSpanFiraCode(
-            context: context,
-            text: 'const ',
-            color: MyColors.savoyBlue,
-          ),
-          textSpanFiraCode(
-            context: context,
-            text: 'githubLink',
-            color: MyColors.mintJelly,
-          ),
-          textSpanFiraCode(
-            context: context,
-            text: ' = ',
-            color: Colors.white,
-          ),
-          textSpanFiraCode(
-            context: context,
-            text: '“',
-          ),
-          textSpanFiraCode(
-            context: context,
-            text: 'https://github.com/gulsenkeskin',
-            decoration: TextDecoration.underline,
-            decorationColor: MyColors.salmonSalt,
-          ),
-          textSpanFiraCode(
-            context: context,
-            text: '”',
-          ),
-        ],
-      ),
-    );
-  }
 }
-
