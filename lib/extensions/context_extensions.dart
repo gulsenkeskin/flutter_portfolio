@@ -26,52 +26,31 @@ extension MediaQueryExtension on BuildContext {
   double dynamicWidth(double val) => width * val;
   double dynamicHeight(double val) => height * val;
 
+  double get fem0_7 => dynamicFem(0.7);
+  double get fem3 => dynamicFem(3);
   double get fem8 => dynamicFem(8);
+  double get fem12 => dynamicFem(12);
   double get fem16 => dynamicFem(16);
-
+  double get fem17 => dynamicFem(17);
   double get fem18 => dynamicFem(18);
-  double get fem21 => dynamicFem(21);
-
   double get fem24 => dynamicFem(24);
+  double get fem31 => dynamicFem(31);
   double get fem32 => dynamicFem(32);
-  double get fem42 => dynamicFem(42);
-
+  double get fem54 => dynamicFem(54);
+  double get fem55 => dynamicFem(55);
+  double get fem56 => dynamicFem(56);
   double get fem62 => dynamicFem(62);
-
   double get fem69 => dynamicFem(69);
-  double get fem82 => dynamicFem(82);
-
-  double get fem130 => dynamicFem(130);
-  double get fem179 => dynamicFem(179);
-  double get fem308 => dynamicFem(308);
-
-  double get fem380 => dynamicFem(380);
-  double get fem385 => dynamicFem(385);
-
-  double get fem391 => dynamicFem(391);
-  double get fem404 => dynamicFem(404);
-
-  double get fem415 => dynamicFem(415);
-
-  double get fem490 => dynamicFem(490);
-  double get fem521 => dynamicFem(521);
-
-  double get fem613 => dynamicFem(613);
-
-  double get fem644 => dynamicFem(644);
-  double get fem674 => dynamicFem(674);
-  double get fem780 => dynamicFem(780);
-  double get fem742 => dynamicFem(742);
-  double get fem941 => dynamicFem(941);
-  double get fem980 => dynamicFem(980);
-
+  double get fem122 => dynamicFem(122);
+  double get fem311 => dynamicFem(311);
+  double get fem475 => dynamicFem(475);
+  double get fem505 => dynamicFem(505);
+  double get fem510 => dynamicFem(510);
   double get fem1782 => dynamicFem(1782);
-
-  double get ffem18 => dynamicFFem(18);
   double get ffem16 => dynamicFFem(16);
+  double get ffem18 => dynamicFFem(18);
 
   // double get fem => dynamicFem();
 
   double get textHeight => ffem / fem;
-
 }
