@@ -7,6 +7,4 @@
 
 
  ## Screens made :
-![image](https://user-images.githubusercontent.com/63197899/210872706-89f7d019-fe30-454c-ba72-2c779c9e6a6c.png)
-
- 
+![image](https://user-images.githubusercontent.com/63197899/211315919-cbdb6aea-482f-4900-b7e4-b79db191841d.png)
